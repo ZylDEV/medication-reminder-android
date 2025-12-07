@@ -1,0 +1,190 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/riwayat"
+    android:background="#F7F8FC">
+
+    <!-- TOP BAR: Header -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#ADD8E6"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/logoApp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/icons8_drugs_48"
+            android:contentDescription="Logo" />
+
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/app_name"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginStart="12dp"
+            android:gravity="center_vertical"
+            android:textColor="#333333" />
+    </LinearLayout>
+
+    <!-- TOMBOL DOWNLOAD PDF -->
+    <Button
+        android:id="@+id/btnDownloadPdf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerLayout"
+        android:layout_margin="16dp"
+        android:text="Download Riwayat PDF"
+        android:backgroundTint="#607D8B"
+        android:textColor="#FFFFFF" />
+
+    <!-- SCROLL VIEW RIWAYAT -->
+    <ScrollView
+        android:id="@+id/scrollViewRiwayat"
+        android:layout_below="@id/btnDownloadPdf"
+        android:layout_above="@id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Container untuk item riwayat -->
+            <LinearLayout
+                android:id="@+id/riwayatlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- BOTTOM NAVIGATION -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:weightSum="4">
+
+        <!-- HOME -->
+        <LinearLayout
+            android:id="@+id/btnHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="2dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/home"
+                android:contentDescription="Home" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="10sp"
+                android:textColor="#FF5722" />
+        </LinearLayout>
+
+        <!-- STOCK OBAT -->
+        <LinearLayout
+            android:id="@+id/btnStockObat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="2dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/pills"
+                android:contentDescription="Stock Obat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stock Obat"
+                android:textSize="10sp"
+                android:textColor="#4CAF50" />
+        </LinearLayout>
+
+        <!-- HISTORY -->
+        <LinearLayout
+            android:id="@+id/btnHistory"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="2dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/history"
+                android:contentDescription="History" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="History"
+                android:textSize="10sp"
+                android:textColor="#2196F3" />
+        </LinearLayout>
+
+        <!-- PROFIL -->
+        <LinearLayout
+            android:id="@+id/btnProfil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="2dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/setting"
+                android:contentDescription="Profil" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profil"
+                android:textSize="10sp"
+                android:textColor="#9C27B0" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

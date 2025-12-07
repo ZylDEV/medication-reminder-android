@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "448352622879",
+    "firebase_url": "https://diabetes-buddy-29a73-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "diabetes-buddy-29a73",
+    "storage_bucket": "diabetes-buddy-29a73.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:448352622879:android:9667af5e11ea245eef382a",
+        "android_client_info": {
+          "package_name": "com.company.diabetes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFyg_RKHGN5TNEQwpxoleOLtIzj8OULYE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

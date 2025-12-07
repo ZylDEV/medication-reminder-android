@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".paduanapk">
+
+    <!-- Header dengan Logo dan Judul -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#ADD8E6"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/logoApp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/icons8_drugs_48"
+            android:contentDescription="Logo" />
+
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/app_name"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginStart="12dp"
+            android:gravity="center_vertical"
+            android:textColor="#333333" />
+    </LinearLayout>
+
+    <!-- Judul Panduan Aplikasi -->
+    <TextView
+        android:id="@+id/judulPanduan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Panduan Penggunaan Aplikasi"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/judulPanduan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Isi Panduan Aplikasi -->
+        <TextView
+            android:id="@+id/isiPanduan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:justificationMode="inter_word"
+            android:textColor="#000000"
+            android:textAlignment="viewStart" />
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

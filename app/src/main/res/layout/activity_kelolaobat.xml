@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/kelolaobat"
+    android:background="#F7F8FC">
+
+    <!-- Header: Logo dan Judul -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#ADD8E6"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/logoApp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/icons8_drugs_48"
+            android:contentDescription="Logo" />
+
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/app_name"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginStart="12dp"
+            android:gravity="center_vertical"
+            android:textColor="#333333" />
+    </LinearLayout>
+
+    <!-- Form Input Obat (tidak di scroll) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manajemen Obat"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Form Input Obat -->
+        <Spinner
+            android:id="@+id/edtNamaObatManajemen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Obat"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/edtJumlahStok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Jumlah Stok"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btnTambahObat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tambah Obat"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+    </LinearLayout>
+
+    <!-- Daftar Obat -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:text="Daftar Obat"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="16dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:background="#F7F8FC">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutObat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/NamaObat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nama Obat"
+                    android:padding="8dp"
+                    android:inputType="text" />
+
+                <TextView
+                    android:id="@+id/Stok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Jumlah Stok"
+                    android:padding="8dp"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/btnKurangiObat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kurangi obat"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Tombol Aksi (Bagian bawah, tanpa celah) -->
+    <LinearLayout
+        android:id="@+id/buttonSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#FFFFFF"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:elevation="4dp">
+
+        <!-- HOME -->
+        <LinearLayout
+            android:id="@+id/btnHome"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="2dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/home"
+                android:contentDescription="Home" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="10sp"
+                android:textColor="#FF5722"/>
+        </LinearLayout>
+
+        <!-- STOCK -->
+        <LinearLayout
+            android:id="@+id/btnStockObat"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="2dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/pills"
+                android:contentDescription="Stock" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stock"
+                android:textSize="10sp"
+                android:textColor="#4CAF50"/>
+        </LinearLayout>
+
+        <!-- HISTORY -->
+        <LinearLayout
+            android:id="@+id/btnHistory"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="2dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/history"
+                android:contentDescription="History" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="History"
+                android:textSize="10sp"
+                android:textColor="#2196F3"/>
+        </LinearLayout>
+
+        <!-- PROFIL -->
+        <LinearLayout
+            android:id="@+id/btnProfil"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="2dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/setting"
+                android:contentDescription="Profil" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profil"
+                android:textSize="10sp"
+                android:textColor="#9C27B0"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

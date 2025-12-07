@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/akun"
+    android:background="#F7F8FC">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#ADD8E6"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/logoApp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/icons8_drugs_48" />
+
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/app_name"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginStart="12dp"
+            android:gravity="center_vertical"
+            android:textColor="#333333" />
+    </LinearLayout>
+
+    <!-- ScrollView untuk isi profil -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center_horizontal">
+
+            <!-- Nama -->
+            <EditText
+                android:id="@+id/editNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Lengkap"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Usia -->
+            <EditText
+                android:id="@+id/editUsia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Usia"
+                android:inputType="number"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Email -->
+            <EditText
+                android:id="@+id/editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Tombol Simpan Profil -->
+            <Button
+                android:id="@+id/btnSimpan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Simpan"
+                android:backgroundTint="#4CAF50"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Tombol Keluar Akun -->
+            <Button
+                android:id="@+id/btnKeluarAkun"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Keluar Akun"
+                android:backgroundTint="#2196F3"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="8dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#FFFFFF"
+        android:elevation="4dp">
+
+        <!-- HOME -->
+        <LinearLayout
+            android:id="@+id/btnHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="2dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/home"
+                android:contentDescription="Home" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="10sp"
+                android:textColor="#FF5722" />
+        </LinearLayout>
+
+        <!-- STOCK OBAT -->
+        <LinearLayout
+            android:id="@+id/btnStockObat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="2dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/pills"
+                android:contentDescription="Stock Obat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stock Obat"
+                android:textSize="10sp"
+                android:textColor="#4CAF50" />
+        </LinearLayout>
+
+        <!-- HISTORY -->
+        <LinearLayout
+            android:id="@+id/btnHistory"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="2dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/history"
+                android:contentDescription="History" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="History"
+                android:textSize="10sp"
+                android:textColor="#2196F3" />
+        </LinearLayout>
+
+        <!-- PROFIL -->
+        <LinearLayout
+            android:id="@+id/btnProfil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="2dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/setting"
+                android:contentDescription="Profil" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profil"
+                android:textSize="10sp"
+                android:textColor="#9C27B0" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Diabetes Buddy</string>
+    <string name="judul1">Pengingat Obat</string>
+    <string name="judul2">Paduan Penggunaan Obat</string>
+</resources>
